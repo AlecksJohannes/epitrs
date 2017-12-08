@@ -86,3 +86,184 @@ td.amount {
 table {
   width: 100%;
 }
+
+
+label {
+  color: #6b7c93;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+}
+button {
+  white-space: nowrap;
+  border: 0;
+  outline: 0;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 14px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  background-color: #6772e5;
+  text-decoration: none;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  margin-top: 10px;
+}
+
+form {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 3px solid #e6ebf1;
+}
+
+button:hover {
+  color: #fff;
+  cursor: pointer;
+  background-color: #7795f8;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
+}
+
+.StripeElement {
+  display: block;
+  margin: 10px 0 20px 0;
+  max-width: 500px;
+  padding: 10px 14px;
+  box-shadow: rgba(50, 50, 93, 0.14902) 0px 1px 3px, rgba(0, 0, 0, 0.0196078) 0px 1px 0px;
+  border-radius: 4px;
+  background: white;
+}
+
+.StripeElement--focus {
+  box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px, rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+}
+
+.StripeElement.PaymentRequestButton {
+  padding: 0;
+}
+#loader {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #9370DB;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #BA55D3;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #58d5fd;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+#preloader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@-webkit-keyframes spin {
+  0%   {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0%   {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.modal-card-title {
+  text-align: center;
+  color: white !important;
+}
+
+.modal-card-head {
+  background-color: rgba(34, 34, 34, 1) !important; 
+  border-bottom: none !important;
+}
+
+.modal-card-body {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: rgba(34, 34, 34, 1) !important; 
+}
+
+.modal-background {
+  background-color: rgba(34, 34, 34, 1);
+}
+
+input {
+	background-color: transparent;
+	border: none;
+	display: block;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	width: 100%;
+}
+
+input:focus {
+	outline-width: 0;
+}
+
+.icon {
+  height: 32px !important;
+  width: 32px !important;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4tJREFUeNrEV71v1DAUf3Z8Hz2KSKduqAMTElD+gavowFYJ2oUBQbsyslcVYu+/UNqJgRYKGxKceisLH2sFFQsdKjVtae+aS2Kec3bOcZzcNUJg6cmOY/v3e8/P79kA/7mQshP5O5jGqiU/75A5+PzPCGjgruzyypKgFyXsv4bbnEMLxUUBKaLdEv/KWEAIH8VSCDDNHPioaW4WLwhhtno/sQQvRUCa2O0FcEQIuDjgCo66h+3HyRhtBslu5DqP4A0OORIfSFqM9mxbRDQ/4BJ8DRdfBEMFBcgLdFJEkjr77wWSWCokEL0dWEMHVyJG20gQCwmTSNw3l3Z8luvpJrDqi2RfDjhRJPigj6t9thBnNkVMcPEdRel+3UJEB+cD7UWb0jQJ0+eY2ZExuwSPFDAlULnkAGUEWJVCFHKIAg69bgTheRgvFoNKcDFXkbAVZiiSCy6k0mBQG3cGs91mHEio1wZWE2Qc6Hg9CJGUo4HzDMJA6cwW5IFXxxlUG0569M33/bpd70c1h0Bjogpnh35sGQXOJZzNCtQWkpO9ljVlNAuedxRxxdplBmEk/YZnjjApDMW6p/LE9M6FwqvwDadC+woYjms6PLWFzNQJEATq9MIJy0ESmWPMi5MRSTmixr5MYVViPbI2AiUhRkjbdnAyLB17fwO851v18obeB9Dp2mafj0HGWsTxk0fQLMF5lMkFcm2eRyDecjw+O7pDiEXOT0M7gWa3L6b2CB74USYhqbULLXBwDNtJLJcS4mLd3+Fo+47GOjsKRMROrSHKSQe2hxK4ugR7yHRDZTIqpXMcQOfEIPH1bl9kCTEnHB/4aEY+SE4qI3LYmHwIe4bF03cGJT/XYGrShV09FIu2iG6CTR3zAatgUsL4L0CDXj8Z+WdhHH4FYZELVFvU+4dwDZX7oec7G4GEyOkrWMGr1LJJIuL2yKasRSSgIKAyI857PrYAz7TwYiVgBiPa3YIPuGBTB7YRUHtMNVBV47h2fR5mbeB5cSAZ9G0PFvDri25KRwpaBxwl6lv+U2PF3O/7MF8U7EhBX2yNT6swcWMKNnHRJjfuCtYrGUmuZDu7v2Dh+hM4NBUblUBq7c4mrKB2y6NcSvFtoO95LnjR08xKwnsJtxo1WEWQmZx5O6ddeOo+sD5MeJm3oY0IdLZgBq2xiNvySD1EeiGsj80nkY7n+FXpx2nZV/TQTPtHgAEAjorM5YZ2xYoAAAAASUVORK5CYII=)
+
+}
+
+.Select {
+  max-width: 500px;
+  margin: 10px 0 20px 0;
+}

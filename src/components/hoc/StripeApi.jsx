@@ -1,10 +1,25 @@
 import React from 'react';
-import {fetchCharges} from '../../http/Request';
+import {fetchCharges, charge} from '../../http/Request';
   
 function withCharge(WrappedComponent) {
   return class extends React.Component {
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        checkoutData: null
+      }
+    }
+    handleCheckout(amount, description, currency) {
+      charge(amount, description, currency).then((response) => {
+        this.setState({
+          checkoutData: response
+        })
+      })
+    }
+
     render() {
-      return (<WrappedComponent {...this.props} />)
+      return (<WrappedComponent {...this.props}  onCheckout={this.handleCheckout.bind(this)} checkout={this.state.checkoutData}/>)
     }
   }
 }

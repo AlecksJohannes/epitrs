@@ -5,6 +5,7 @@ import Timestamp from 'react-timestamp';
 class Payments extends Component {
   render() {
     const child = this.props.data.map((charge) => {
+      console.log(charge)
       return(
       <tr>
         <td></td>
