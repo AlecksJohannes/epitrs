@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {withCharge} from './components/hoc/Tabhoc';
 import Tab from './components/Tab';
 import TabList from './components/TabList';
-const TabEnhancedwithCharge = withCharge(Tab)
+import "bulma/css/bulma.css";
+import Charge from './components/Charge'
+import Payments from './components/Payments';
+import {withCharge, withCharges} from './components/hoc/StripeApi';
+
+const ChargeEnhanced = withCharge(Charge)
+const PaymentsEnhanced = withCharges(Payments)
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-				<TabList>
-        	<TabEnhancedwithCharge className="a" tabName={"Charge"} />
-        	<TabEnhancedwithCharge className="b" />
-				</TabList>
-      </div>
+      <TabList>
+        <Tab name="Charge">
+          <ChargeEnhanced />
+        </Tab>
+        <Tab name="Payments">
+          <PaymentsEnhanced />
+        </Tab>
+      </TabList>
     );
   }
 }
