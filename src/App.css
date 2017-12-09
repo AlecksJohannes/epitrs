@@ -78,6 +78,15 @@ td, th {
   white-space: nowrap;
 }
 
+th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #32325d !important;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 td.amount {
   color: #3297d3;
   font-weight: 500;
@@ -266,4 +275,18 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYA
 .Select {
   max-width: 500px;
   margin: 10px 0 20px 0;
+}
+
+.btn-refund {
+  background-color: #6772e5 !important;
+  color: white !important; 
+}
+
+thead {
+  background-color: #f6f9fc;
+}
+
+canvas {
+  background-color: #5969e2;
+  border-radius: 5px;
 }

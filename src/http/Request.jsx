@@ -40,4 +40,31 @@ function fetchCharges() {
   })
 }
 
-export {charge, fetchCharges}
+function refund(charge_id) {
+  return axios({
+    method: 'post',
+    url: `${BASE_URL}/refunds`,
+    data: queryString.stringify({charge: charge_id}),
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Authorization": "Bearer " + API_KEY
+    }
+  }) 
+  .then(response => {return response})
+  .catch(error => {return error.response})
+}
+
+function fetchDisputes() {
+   return fetch(`${BASE_URL}/disputes`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Authorization": "Bearer " + API_KEY
+    }
+  }).then(response => response.json())
+  .then(responseJson => {
+    return responseJson
+  })
+}
+
+export {charge, fetchCharges, refund, fetchDisputes}
