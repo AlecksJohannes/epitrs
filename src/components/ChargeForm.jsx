@@ -132,7 +132,8 @@ class ChargeForm extends Component {
           <ModalBackground />
           <ModalCard>
             <ModalCardHeader>
-              <ModalCardTitle>{this.state.isFetchingToken ? 'Generating Token .......' : 'Handling Charging ...' }</ModalCardTitle>
+              <ModalCardTitle>{this.state.isFetchingToken ? 'Generating Token .......' : 'Handling Charging ...' }
+              </ModalCardTitle>
             </ModalCardHeader>
             <ModalCardBody>
               <div id="preloader">

@@ -11,6 +11,7 @@ export default class Tab extends React.Component {
     })
 
     return(
+      <div>
         <Column>
           <ul className="sideBar-Section">
             <li className={this.props.name} onClick={() => {this.props.onSetActiveTab(this.props.name)}}>
@@ -21,10 +22,13 @@ export default class Tab extends React.Component {
               </a>
             </li>
           </ul>
+        </Column>
+        <Column>
           <div style={{marginLeft: 150}}>
             {body}
           </div>
         </Column>
+      </div>
     )
   }
 }

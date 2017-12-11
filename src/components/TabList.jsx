@@ -6,7 +6,7 @@ export default class TabList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTabName: 'Charge'
+      selectedTabName: 'Home'
     }
   }
 

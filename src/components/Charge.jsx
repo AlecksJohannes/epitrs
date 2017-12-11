@@ -27,12 +27,16 @@ class Charge extends Component {
   render() {
     return (
       <Column>
-        <StripeProvider apiKey="pk_test_KeVCXcElLEHnQ8LruHPFWqQY">
-          <Elements>
-            <ChargeForm onCheckout={this.props.onCheckout} />
-          </Elements>
-        </StripeProvider>
-        <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
+        <Container>
+          <Box>
+            <StripeProvider apiKey="pk_test_KeVCXcElLEHnQ8LruHPFWqQY">
+              <Elements>
+                <ChargeForm onCheckout={this.props.onCheckout} />
+              </Elements>
+            </StripeProvider>
+            <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
+          </Box>
+        </Container>
       </Column>
     );
   }

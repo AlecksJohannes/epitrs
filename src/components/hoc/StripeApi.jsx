@@ -59,18 +59,28 @@ function withCharges(WrappedComponent) {
 
       this.state = {
         data: [],
-        refund: null
+        refund: null,
+        isLoading: false
       }
     }
     componentDidMount() {
-      fetchCharges().then((response) => {
-        this.setState({
-          data: response.data
+      this.setState({
+        isLoading: true
+      }, () => {
+        fetchCharges().then((response) => {
+          this.setState({
+            data: response.data
+          }, () => {
+            this.setState({
+              isLoading: false 
+            });
+          })
         })
       })
     }
 
     sortCharges(sort) {
+      var sort = JSON.parse(sort)
       var sortedCharges
       if(sort.isAscending) {
         sortedCharges = _.sortBy(this.state.data, sort.option)
@@ -91,7 +101,7 @@ function withCharges(WrappedComponent) {
     }		
 
     render() {
-      return (<WrappedComponent {...this.props} data={this.state.data} filter={this.sortCharges.bind(this)} requestRefund={this.requestRefund.bind(this)} />)
+      return (<WrappedComponent {...this.props} onLoading={this.state.isLoading} data={this.state.data} filter={this.sortCharges.bind(this)} requestRefund={this.requestRefund.bind(this)} />)
     }
   }
 }
