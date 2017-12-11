@@ -1,8 +1,8 @@
 # Project 3 - *Stripe Central*
 
-**Name of your app** is an app using the [Stripe API](https://stripe.com/docs/api).
+**Epirts** is an app using the [Stripe API](https://stripe.com/docs/api).
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## User Stories
 
